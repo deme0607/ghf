@@ -32,7 +32,7 @@ For additional usage, please type `ghf -h` for help.
 To install, use `go get`:
 
 ```bash
-$ go get -d github.com/deme0607/ghf
+$ go get github.com/deme0607/ghf
 ```
 
 or download binary from [release page](https://github.com/deme0607/ghf/releases) and place it in `$PATH` directory
