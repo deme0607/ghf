@@ -36,8 +36,8 @@ func (cli *CLI) Run(args []string) int {
 	flags := flag.NewFlagSet(Name, flag.ContinueOnError)
 	flags.SetOutput(cli.errStream)
 
-	flags.BoolVar(&noEditor, "no-editor", false, "Disable opening /usr/bin/vim")
-	flags.BoolVar(&noEditor, "n", false, "Disable opening /usr/bin/vim(Short)")
+	flags.BoolVar(&noEditor, "no-editor", false, "Disable opening $EDITOR")
+	flags.BoolVar(&noEditor, "n", false, "Disable opening $EDITOR(Short)")
 	flags.StringVar(&params, "params", "", "Parameters for template")
 	flags.StringVar(&params, "p", "", "Parameters for template(Short)")
 
