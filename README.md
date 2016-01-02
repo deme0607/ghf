@@ -11,7 +11,8 @@ You can also use [`text/template`](https://golang.org/pkg/text/template/) style 
 
 And specify your template file on `.ghf-tempalte` file at your project directory.
 
-```text:.ghf-tempalte
+#### `.ghf-tempalte`
+```
 sample_pullreq_template.md
 ```
 
