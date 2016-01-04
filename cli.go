@@ -69,6 +69,7 @@ func (cli *CLI) Run(args []string) int {
 		issue         string
 		base          string
 		head          string
+		browse        bool
 
 		version bool
 	)
@@ -87,6 +88,8 @@ func (cli *CLI) Run(args []string) int {
 	// parameters for hub pull-request command
 	flags.BoolVar(&force, "force", false, "")
 	flags.BoolVar(&force, "f", false, "(Short)")
+	flags.BoolVar(&browse, "browse", false, "")
+	flags.BoolVar(&browse, "o", false, "(Short)")
 	flags.StringVar(&issue, "issue", "", "")
 	flags.StringVar(&issue, "i", "", "(Short)")
 	flags.StringVar(&base, "base", "", "")
@@ -151,6 +154,9 @@ func (cli *CLI) Run(args []string) int {
 	hubCmd.WithArg("-m " + content)
 	if force {
 		hubCmd.WithArg("-f")
+	}
+	if browse {
+		hubCmd.WithArg("-o")
 	}
 	if issue != "" {
 		hubCmd.WithArg("-i " + issue)
